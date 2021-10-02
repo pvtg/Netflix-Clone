@@ -1,4 +1,4 @@
-# Food-ordering-website
+# Netflix-Homepage-Clone
 How to particpate in Hacktoberfest 2021
 How to register, some important rules to follow, which repos to contribute and other details in a 17 mins quick video on our Youtube Channel.
 
