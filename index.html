@@ -105,9 +105,9 @@
         <h1>Frequently Asked Questions</h1>
         <div class="buttons">
             <button type="submit">What is Netflix?
-                <span onclick="toggle1()" id="rot1">+</span>
+                <span class="rot">+</span>
             </button>
-            <div class="faq-answer closed" id="ans1">
+            <div class="faq-answer closed">
                 <span>
                     Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
                     documentaries and more – on thousands of internet-connected devices.
@@ -119,9 +119,9 @@
                 </span>
             </div>
             <button type="submit">How much does Netflix cost?
-                <span onclick="toggle2()" id="rot2">+</span>
+                <span  class="rot">+</span>
             </button>
-            <div class="faq-answer closed" id="ans2">
+            <div class="faq-answer closed">
                 <span>
                     Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed
                     monthly fee. Plans range from ₹ 199 to ₹ 799 a month. No extra costs, no contracts.
@@ -130,9 +130,9 @@
             </div>
 
             <button type="submit">Where can I watch?
-                <span onclick="toggle3()" id="rot3">+</span>
+                <span  class="rot">+</span>
             </button>
-            <div class="faq-answer closed" id="ans3">
+            <div class="faq-answer closed">
                 <span>
                     Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to
                     watch instantly on the web at netflix.com from your personal computer or on any internet-connected
@@ -146,27 +146,27 @@
                 </span>
             </div>
             <button type="submit">How do I cancel?
-                <span onclick="toggle4()" id="rot4">+</span>
+                <span  class="rot">+</span>
             </button>
-            <div class="faq-answer closed" id="ans4">
+            <div class="faq-answer closed">
             <span>
                 Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
                 <br>
             </span>
         </div>
             <button type="submit">What can I watch on Netflix?
-                <span onclick="toggle5()" id="rot5">+</span>
+                <span  class="rot">+</span>
             </button>
-            <div class="faq-answer closed" id="ans5">
+            <div class="faq-answer closed">
                 <span>
                     Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
                     <br>
                 </span>
             </div>
             <button type="submit">Is Netflix good for kids?
-                <span onclick="toggle6()" id="rot6">+</span>
+                <span  class="rot">+</span>
             </button>
-            <div class="faq-answer closed" id="ans6">
+            <div class="faq-answer closed">
                 <span>
                     The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
                     <br>
@@ -220,44 +220,18 @@
     </div>
     </footer>
     <script>
-
-        function toggle1() {
-            var x = document.getElementById("ans1");
-            var y = document.getElementById("rot1");
-            y.classList.toggle('rotate');
-            x.classList.toggle('closed');
+         var answers = document.querySelectorAll(".faq-answer");
+        var rotate = document.querySelectorAll(".rot");
+        rotate.forEach((rot,i) => {
+            rot.addEventListener("click", ()=>{
+                toggle(i);
+            })
+        });
+        var toggle =function(manual) {
+            rotate[manual].classList.toggle('rotate');
+            answers[manual].classList.toggle('closed');
         }
-        function toggle2() {
-            var x = document.getElementById("ans2");
-            var y = document.getElementById("rot2");
-            y.classList.toggle('rotate');
-            x.classList.toggle('closed');
-        }
-        function toggle3() {
-            var x = document.getElementById("ans3");
-            var y = document.getElementById("rot3");
-            y.classList.toggle('rotate');
-            x.classList.toggle('closed');
-        }
-        function toggle4() {
-            var x = document.getElementById("ans4");
-            var y = document.getElementById("rot4");
-            y.classList.toggle('rotate');
-            x.classList.toggle('closed');
-        }
-        function toggle5() {
-            var x = document.getElementById("ans5");
-            var y = document.getElementById("rot5");
-            y.classList.toggle('rotate');
-            x.classList.toggle('closed');
-        }
-        function toggle6() {
-            var x = document.getElementById("ans6");
-            var y = document.getElementById("rot6");
-            y.classList.toggle('rotate');
-            x.classList.toggle('closed');
-        }
-
+        
     </script>
 </body>
 
