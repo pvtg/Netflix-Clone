@@ -7,14 +7,12 @@ header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/IN-en-20210524-popsignuptwoweeks-perspective_alpha_website_large.jpg');
     background-size: cover;
     border-bottom: 10px solid #222222;
-    height: 100%;
 }
 nav{
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     padding: 30px 50px;
-    height: 20%
 }
 
 .sign_div select{
@@ -43,7 +41,7 @@ nav{
     width: 100%;
 }
 .content_header{
-    height: 80vh;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -429,7 +427,7 @@ footer h1 a{
         padding: 7px 10px ;
         font-size: 18px;
     }
-    
+
     .section_1{
         flex-direction: column;
         justify-content: center;
@@ -568,7 +566,7 @@ footer h1 a{
         padding: 7px 10px ;
         font-size: 18px;
     }
-    
+
     .section_1{
         flex-direction: column;
         justify-content: center;
@@ -721,4 +719,3 @@ footer h1 a{
     .downloading{
         width:340px;
     }
-}
