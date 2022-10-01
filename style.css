@@ -87,6 +87,9 @@ nav{
     font-size: 16px;
 }
 .search .get_started{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 31%;
     height: 60px;
     padding: 5px 10px;
