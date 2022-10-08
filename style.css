@@ -427,7 +427,7 @@ footer h1 a{
         padding: 7px 10px ;
         font-size: 18px;
     }
-    
+
     .section_1{
         flex-direction: column;
         justify-content: center;
@@ -566,7 +566,7 @@ footer h1 a{
         padding: 7px 10px ;
         font-size: 18px;
     }
-    
+
     .section_1{
         flex-direction: column;
         justify-content: center;
@@ -719,4 +719,3 @@ footer h1 a{
     .downloading{
         width:340px;
     }
-}
