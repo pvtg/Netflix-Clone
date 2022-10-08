@@ -121,7 +121,7 @@
     <section class="section_3">
         <h1>Frequently Asked Questions</h1>
         <div class="buttons">
-            <button type="submit">What is Netflix?
+            <button type="submit" class="ques">What is Netflix?
                 <span class="rot">+</span>
             </button>
             <div class="faq-answer closed">
@@ -135,7 +135,7 @@
                     <br>
                 </span>
             </div>
-            <button type="submit">How much does Netflix cost?
+            <button type="submit" class="ques">How much does Netflix cost?
                 <span  class="rot">+</span>
             </button>
             <div class="faq-answer closed">
@@ -146,7 +146,7 @@
                 </span>
             </div>
 
-            <button type="submit">Where can I watch?
+            <button type="submit" class="ques">Where can I watch?
                 <span  class="rot">+</span>
             </button>
             <div class="faq-answer closed">
@@ -162,7 +162,7 @@
                     <br>
                 </span>
             </div>
-            <button type="submit">How do I cancel?
+            <button type="submit" class="ques">How do I cancel?
                 <span  class="rot">+</span>
             </button>
             <div class="faq-answer closed">
@@ -171,7 +171,7 @@
                 <br>
             </span>
         </div>
-            <button type="submit">What can I watch on Netflix?
+            <button type="submit" class="ques">What can I watch on Netflix?
                 <span  class="rot">+</span>
             </button>
             <div class="faq-answer closed">
@@ -180,7 +180,7 @@
                     <br>
                 </span>
             </div>
-            <button type="submit">Is Netflix good for kids?
+            <button type="submit" class="ques">Is Netflix good for kids?
                 <span  class="rot">+</span>
             </button>
             <div class="faq-answer closed">
@@ -237,17 +237,23 @@
     </div>
     </footer>
     <script>
-         var answers = document.querySelectorAll(".faq-answer");
-        var rotate = document.querySelectorAll(".rot");
+         let answers = document.querySelectorAll(".faq-answer");
+         let questions=document.querySelectorAll('.ques');
+         let rotate = document.querySelectorAll(".rot");
         rotate.forEach((rot,i) => {
             rot.addEventListener("click", ()=>{
                 toggle(i);
             })
         });
-        var toggle =function(manual) {
+        questions.forEach((rot,i)=>{
+            rot.addEventListener("click", ()=>{
+                toggle(i);
+            })
+        });
+        let toggle =function(manual) {
             rotate[manual].classList.toggle('rotate');
             answers[manual].classList.toggle('closed');
-        }
+        };
         
     </script>
 </body>
